@@ -135,7 +135,7 @@ our side too.
 
 Now that you have Front-Commerce Lite installed, you can play and experiment
 with it. You can browse
-[Front-Commerce’s developer documentation](https://developers.front-commerce.com/docs/)
+[Front-Commerce’s developer documentation](https://developers.front-commerce.com/)
 to understand our implementation and architecture.
 
 Here are some tasks you can try:
