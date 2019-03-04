@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Description from "./Description";
 import Actions from "./Actions";
-import TitleWithPrice from "theme/ui/molecules/TitleWithPrice";
+import TitleWithPrice from "theme/components/molecules/TitleWithPrice";
 import "./ProductSynthesis.scss";
 
 const ProductSynthesis = ({ product }) => (

@@ -1,7 +1,7 @@
 import React from "react";
-import { H1 } from "theme/ui/atoms/Typography/Heading";
-import Paragraph from "theme/ui/atoms/Typography/Paragraph";
-import Link from "theme/ui/atoms/Typography/Link";
+import { H1 } from "theme/components/atoms/Typography/Heading";
+import Paragraph from "theme/components/atoms/Typography/Paragraph";
+import Link from "theme/components/atoms/Typography/Link";
 
 export default () => (
   <div>

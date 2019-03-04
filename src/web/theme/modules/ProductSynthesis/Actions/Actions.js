@@ -1,5 +1,5 @@
 import React from "react";
-import AddToCart from "theme/ui/molecules/AddToCart";
+import AddToCart from "theme/components/molecules/AddToCart";
 import { CartModal } from "../../Cart";
 
 const Actions = ({ product }) => {

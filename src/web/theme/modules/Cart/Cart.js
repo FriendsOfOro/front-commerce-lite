@@ -8,12 +8,12 @@ import {
   ModalHeader,
   ModalContent,
   ModalAction
-} from "theme/ui/templates/Modal";
-import Button from "theme/ui/atoms/Button";
-import LoadingArea from "theme/ui/molecules/LoadingArea";
-import Loading from "theme/ui/atoms/Loading";
-import Recap from "theme/ui/organisms/Recap";
-import RecapTotal from "theme/ui/organisms/RecapTotal";
+} from "theme/components/templates/Modal";
+import Button from "theme/components/atoms/Button";
+import LoadingArea from "theme/components/molecules/LoadingArea";
+import Loading from "theme/components/atoms/Loading";
+import Recap from "theme/components/organisms/Recap";
+import RecapTotal from "theme/components/organisms/RecapTotal";
 
 class Cart extends Component {
   constructor() {
