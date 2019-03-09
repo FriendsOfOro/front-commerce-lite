@@ -1,6 +1,4 @@
----
-title: Front-Commerce Lite documentation
----
+# Front-Commerce Lite’s documentation
 
 Welcome to Front-Commerce Lite’s documentation.
 

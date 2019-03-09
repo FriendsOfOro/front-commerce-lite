@@ -120,7 +120,7 @@ It could be a problem on our side too.
 ## Get help
 
 Now that you have Front-Commerce Lite installed, you can play and experiment with it.
-You can browse [Front-Commerce Lite’s documentation](docs/welcome.md) or [Front-Commerce’s official documentation](https://developers.front-commerce.com/) to understand our implementation and architecture in depth.
+You can browse [Front-Commerce Lite’s documentation](docs/readme.md) or [Front-Commerce’s official documentation](https://developers.front-commerce.com/) to understand our implementation and architecture in depth.
 
 Here are some tasks you can try:
 
