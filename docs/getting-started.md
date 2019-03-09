@@ -1,6 +1,4 @@
----
-title: Getting started with Front-Commerce
----
+# Getting started with Front-Commerce
 
 While Front-Commerce is a [closed source product](https://developers.front-commerce.com/license.html), we don't want you to trust us blindly.
 

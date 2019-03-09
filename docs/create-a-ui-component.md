@@ -1,6 +1,4 @@
----
-title: Create a UI Component
----
+# Create a UI Component
 
 In Front-Commerce we split our components in two categories: the **UI** components available in the `components` folder, and the business components available in the `modules` and `pages` folders.
 

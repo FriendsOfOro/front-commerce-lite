@@ -1,6 +1,4 @@
----
-title: Extend the GraphQL Schema
----
+# Extend the GraphQL Schema
 
 How to extend the existing GraphQL Schema?
 

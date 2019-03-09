@@ -1,6 +1,4 @@
----
-title: Adapt the theme to your brand
----
+# Adapt the theme to your brand
 
 When you start a new project, one of the first things that you will need to do is to adapt the look and feel of Front-Commerce to match your brand's style.
 

@@ -1,6 +1,4 @@
----
-title: Create a custom page
----
+# Create a custom page
 
 When creating an online store, you often have to create whole new pages specific to your store.
 
