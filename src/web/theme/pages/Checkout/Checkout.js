@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "theme/ui/atoms/Typography/Link";
-import { H1 } from "theme/ui/atoms/Typography/Heading";
-import Paragraph from "theme/ui/atoms/Typography/Paragraph";
-import Page from "theme/ui/templates/Page";
+import Link from "theme/components/atoms/Typography/Link";
+import { H1 } from "theme/components/atoms/Typography/Heading";
+import Paragraph from "theme/components/atoms/Typography/Paragraph";
+import Page from "theme/components/templates/Page";
 
 const Checkout = () => {
   return (

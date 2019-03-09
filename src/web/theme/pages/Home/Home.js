@@ -3,9 +3,9 @@ import HomeQuery from "./HomeQuery.gql";
 import EnhanceHome from "./EnhanceHome";
 import ProductList from "theme/modules/ProductList";
 import HomeBanner from "theme/modules/HomeBanner";
-import LoadingArea from "theme/ui/molecules/LoadingArea";
-import Loading from "theme/ui/atoms/Loading";
-import Page from "theme/ui/templates/Page";
+import LoadingArea from "theme/components/molecules/LoadingArea";
+import Loading from "theme/components/atoms/Loading";
+import Page from "theme/components/templates/Page";
 
 const Home = ({ store, category, loading }) => (
   <Page>

@@ -1,21 +1,14 @@
 #import "theme/components/atoms/Typography/Price/PriceFragment.gql"
 
-fragment Product on Product {
-  sku
-  name
-  imageUrl
-  description
+fragment ProductPriceFragment on Product {
   prices {
     finalPrice {
       priceInclTax {
         ...PriceFragment
       }
+      priceExclTax {
+        ...PriceFragment
+      }
     }
-  }
-}
-
-query Product($sku: String!) {
-  product(sku: $sku) {
-    ...Product
   }
 }

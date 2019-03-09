@@ -6,11 +6,11 @@ import withProps from "recompose/withProps";
 
 import EnhanceProduct from "./EnhanceProduct";
 import ProductQuery from "./ProductQuery.gql";
-import PageWithMedia from "theme/ui/templates/PageWithMedia";
+import PageWithMedia from "theme/components/templates/PageWithMedia";
 import ProductSynthesis from "theme/modules/ProductSynthesis";
 import HeroImage from "theme/modules/HeroImage";
-import LoadingArea from "theme/ui/molecules/LoadingArea";
-import Loading from "theme/ui/atoms/Loading";
+import LoadingArea from "theme/components/molecules/LoadingArea";
+import Loading from "theme/components/atoms/Loading";
 import createMediaUrlFromPath from "../../../utils/createMediaUrlFromPath";
 
 const Product = ({ loading, product }) => {
