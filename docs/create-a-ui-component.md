@@ -272,3 +272,10 @@ export default () => (
   </InlineCards>
 );
 ```
+
+## Next
+
+We now recommend you to start experimenting with components and change things to understand how React works!
+In React, **everything is a component** so you could reuse these skills to build every part of pages composing your application.
+
+Then, you could learn how to [add a new page to your application](create-custom-page.md).

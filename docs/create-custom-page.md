@@ -76,3 +76,9 @@ We can now navigate to [http://localhost:8080/greetings](http://localhost:8080/g
 Once you have a custom page up and running, feel free to change the page component (`Greetings`) however you want.
 You can make it fetch data, render data, send a mutation… after all, it's a component!
 It will work exactly the same way as any other component in your application.
+
+## Next
+
+We now recommend you to start experimenting with Pages and change things to understand how a page could be organized and reuse existing components!
+
+Then, you could learn how to [extend the GraphQL Schema](extend-graphql-schema.md) by exposing new information that you may for instance display on this page afterwards.

@@ -328,3 +328,10 @@ Splitting code is a difficult task, it needs practice and refinement.
 But it is also a pretty personal point of view, thus one team could split code differently.
 
 We advise you to not overcomplicate things and find a method that match your needs.
+
+## Next
+
+We now recommend you to start experimenting with data-fetching and enhancers to understand how GraphQL works!
+In React, everything is a component and GraphQL has the concept of [Fragments](https://www.apollographql.com/docs/react/advanced/fragments.html) that allow to collocate data requirements close to your business components.
+
+Then, you could learn how to [add a new page to your application](create-custom-page.md) and fetch data from the page itself, while using business component’s GraphQL fragments to build the query.
