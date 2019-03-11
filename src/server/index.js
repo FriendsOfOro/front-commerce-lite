@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import withGraphQLApi from "./express/withGraphQLApi";
-import modules from "./modules.js";
 
 require("dotenv").config({ silent: true });
 
@@ -18,7 +17,7 @@ async function start() {
       origin: "*"
     })
   );
-  app.use(await withGraphQLApi(modules));
+  app.use(await withGraphQLApi(require("./modules").default));
 
   const server = app.listen(config.port, config.host, undefined, () => {
     /* eslint-disable no-console */
