@@ -65,7 +65,7 @@
     "babel-polyfill": "6.26.0",
     "concurrently": "3.6.1",
     "css-loader": "0.28.11",
-    "eslint": "5.10.0",
+    "eslint": "5.15.1",
     "eslint-config-react-app": "3.0.5",
     "eslint-loader": "2.1.1",
     "eslint-plugin-flowtype": "2.50.3",
