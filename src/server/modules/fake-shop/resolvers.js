@@ -5,11 +5,15 @@ let cart = [];
 
 const makeRandomProduct = () => ({
   sku: faker.helpers.slugify(faker.commerce.product()),
-  name: faker.commerce.productName,
+  name: faker.commerce.productName(),
   description: faker.lorem.paragraphs(3, "<br /><br />"),
   imageUrl: faker.image.technics(400, 400),
   prices: { finalPrice: faker.commerce.price() }
 });
+
+const catalog = [...new Array(faker.random.number({ min: 7, max: 60 }))].map(
+  makeRandomProduct
+);
 
 const resolveSomeday = value =>
   new Promise(resolve =>
@@ -24,16 +28,16 @@ export default {
     category: () => ({
       name: "My Category",
       layer: ({ params: { size } }) => ({
-        products: [...new Array(size)].map(makeRandomProduct)
+        products: [...catalog].slice(0, size)
       })
     }),
-    product: makeRandomProduct,
+    product: (_, { sku }) => catalog.find(product => product.sku === sku),
     cart: () => cart
   },
 
   Mutation: {
-    addItemToCart: () => {
-      cart = [...cart, makeRandomProduct()];
+    addItemToCart: (_, { sku }) => {
+      cart = [...cart, catalog.find(product => product.sku === sku)];
       return resolveSomeday({
         success: true,
         cart
