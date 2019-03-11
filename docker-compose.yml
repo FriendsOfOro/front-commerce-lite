@@ -1,7 +1,7 @@
 version: '2'
 services:
   npm:
-    image: node:8.10.0
+    image: node:8.15.1
     network_mode: "bridge"
     ports:
       - "4000:4000"
@@ -14,7 +14,7 @@ services:
     working_dir: /project
 
   styleguide:
-    image: node:8.10.0
+    image: node:8.15.1
     network_mode: "bridge"
     ports:
       - "9001:9001"
