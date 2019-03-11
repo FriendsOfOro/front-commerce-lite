@@ -1,0 +1,81 @@
+type Query {
+  category(id: Int!): Category
+  product(sku: String!): Product
+  cart: Cart
+}
+
+type Mutation {
+  addItemToCart(sku: String!): CartPayload
+  removeItemFromCart(item_id: Int!): CartPayload
+}
+
+type CartPayload {
+  success: Boolean
+  errorMessage: String
+  cart: Cart
+}
+
+type Cart {
+  id: Int
+  items_qty: Int
+  items: [CartItem]
+  totals: CartTotals
+}
+
+type CartItem {
+  name: String
+  qty: Int
+  item_id: Int
+  sku: String
+  product: Product
+  priceInfo: CartItemPriceInfo
+}
+
+type CartItemPriceInfo {
+  rowTotalInclTax: Price
+}
+
+type CartTotals {
+  subtotalInclTax: Price
+}
+
+type Category {
+  name: String
+  layer(params: QueryInput!): Layer
+}
+
+input QueryInput {
+  size: Int!
+  from: Int!
+}
+
+type Layer {
+  products: [Product]
+}
+
+type Product {
+  sku: String
+  name: String
+  description: String
+  imageUrl: String
+  prices: ProductPrices
+}
+
+type ProductPrices {
+  finalPrice: BothInclAndExclTaxesPrice
+}
+
+type BothInclAndExclTaxesPrice {
+  priceInclTax: Price
+  priceExclTax: Price
+}
+
+type Price {
+  value: Money
+  includeTax: Boolean
+}
+
+type Money {
+  amount: Float
+  currency: String
+}

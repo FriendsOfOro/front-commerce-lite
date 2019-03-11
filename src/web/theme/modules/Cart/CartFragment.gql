@@ -11,14 +11,5 @@ fragment CartFragment on Cart {
     subtotalInclTax {
       ...PriceFragment
     }
-    totalInclTax {
-      ...PriceFragment
-    }
-    totalExclTax {
-      ...PriceFragment
-    }
-    tax {
-      ...PriceFragment
-    }
   }
 }

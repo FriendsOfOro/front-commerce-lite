@@ -1,4 +1,5 @@
 import StoreInformation from "./modules/store-information";
+import FakeShop from "./modules/fake-shop";
 
 export default [
   // In a real Front-Commerce application you could load core modules
@@ -8,5 +9,6 @@ export default [
   // the project that match your needs and run away from a monolithic
   // architecture when it is not relevant
 
-  StoreInformation
-];
+  StoreInformation,
+  process.env.FEATURE_FAKE_LOCAL_SHOP_ENABLE ? FakeShop : undefined
+].filter(Boolean); // only keep the enabled ones
