@@ -3,6 +3,8 @@ import cors from "cors";
 import withGraphQLApi from "./express/withGraphQLApi";
 import modules from "./modules.js";
 
+require("dotenv").config({ silent: true });
+
 const config = {
   host: process.env.FRONT_COMMERCE_HOST || "0.0.0.0",
   port: process.env.FRONT_COMMERCE_PORT || process.env.VIRTUAL_PORT || 4000

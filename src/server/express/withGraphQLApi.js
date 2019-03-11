@@ -33,6 +33,9 @@ export default async modules => {
 };
 
 async function remoteFrontCommerceMagento2DemoSchema() {
+  if (process.env.FEATURE_DEMO_REMOTE_SCHEMA_STITCHING_DISABLE) {
+    return;
+  }
   const link = new HttpLink({
     uri: "https://demo.front-commerce.com/graphql",
     // to persist session between refreshes you can inject a custom cookie jar
