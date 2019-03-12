@@ -22,7 +22,7 @@ export default async modules => {
     schemas: [
       await remoteFrontCommerceMagento2DemoSchema(),
       GraphQLOptions.schema
-    ]
+    ].filter(Boolean)
   });
 
   router.use(bodyParser.json());
