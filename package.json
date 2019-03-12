@@ -42,7 +42,7 @@
     "express": "4.16.4",
     "faker": "4.1.0",
     "fetch-cookie": "0.7.2",
-    "file-loader": "1.1.11",
+    "file-loader": "3.0.1",
     "graphql": "0.13.2",
     "graphql-tools": "2.24.0",
     "node-fetch": "2.3.0",
