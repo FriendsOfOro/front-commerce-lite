@@ -46,7 +46,7 @@
     "graphql": "0.13.2",
     "graphql-tools": "2.24.0",
     "node-fetch": "2.3.0",
-    "raw-loader": "0.5.1",
+    "raw-loader": "1.0.0",
     "react": "16.8.4",
     "react-apollo": "2.5.2",
     "react-dom": "16.8.4",
