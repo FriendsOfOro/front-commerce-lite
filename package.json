@@ -84,7 +84,7 @@
     "storybook-readme": "4.0.5",
     "style-loader": "0.23.1",
     "uglifyjs-webpack-plugin": "2.1.2",
-    "webpack": "4.27.1",
+    "webpack": "4.29.6",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.1",
     "webpack-node-externals": "1.7.2"
