@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/front-commerce/front-commerce-lite#readme",
   "dependencies": {
-    "@gramps/gramps": "1.5.0",
+    "@gramps/gramps": "2.0.0",
     "apollo-boost": "0.3.1",
     "apollo-client": "2.5.1",
     "apollo-link-http": "1.5.12",
