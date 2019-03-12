@@ -44,7 +44,7 @@
     "fetch-cookie": "0.7.2",
     "file-loader": "1.1.11",
     "graphql": "0.13.2",
-    "graphql-tools": "2.24.0",
+    "graphql-tools": "4.0.4",
     "node-fetch": "2.3.0",
     "raw-loader": "0.5.1",
     "react": "16.6.3",
