@@ -81,7 +81,7 @@
     "optimize-css-assets-webpack-plugin": "4.0.3",
     "prettier": "1.16.4",
     "sass-loader": "7.1.0",
-    "storybook-readme": "4.0.2",
+    "storybook-readme": "4.0.5",
     "style-loader": "0.23.1",
     "uglifyjs-webpack-plugin": "2.0.1",
     "webpack": "4.27.1",
