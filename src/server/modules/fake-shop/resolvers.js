@@ -4,7 +4,9 @@ const currency = "EUR";
 let cart = [];
 
 const makeRandomProduct = () => ({
-  sku: faker.helpers.slugify(faker.commerce.product()),
+  sku:
+    faker.helpers.slugify(faker.commerce.product()) +
+    faker.random.number({ min: 7, max: 60 }),
   name: faker.commerce.productName(),
   description: faker.lorem.paragraphs(3, "<br /><br />"),
   imageUrl: faker.image.technics(400, 400),
