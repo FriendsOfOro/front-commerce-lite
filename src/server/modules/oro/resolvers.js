@@ -24,19 +24,7 @@ axiosInstance.interceptors.request.use(config => {
 
 export default {
   Query: {
-    category: () =>
-      axiosInstance
-        .get("admin/api/products", {
-          params: {
-            include: "names,images,images.image,images.image.filePath"
-          }
-        })
-        .then(({ data }) => ({
-          name: "All products",
-          layer: {
-            products: new JSONAPIDeserializer().deserialize(data)
-          }
-        })),
+    category: () => ({}),
     product: (_, { sku }) =>
       axiosInstance
         .get("admin/api/products", {
@@ -47,6 +35,21 @@ export default {
         })
         .then(({ data }) => new JSONAPIDeserializer().deserialize(data))
         .then(products => (products.length ? products[0] : null))
+  },
+  Category: {
+    name: () => "All products",
+    layer: (_, { params: { size, from } }) =>
+      axiosInstance
+        .get("admin/api/products", {
+          params: {
+            include: "names,images,images.image,images.image.filePath",
+            "page[size]": size,
+            "page[number]": from
+          }
+        })
+        .then(({ data }) => ({
+          products: new JSONAPIDeserializer().deserialize(data)
+        }))
   },
   Product: {
     name: ({ names }) => names[0].string,
