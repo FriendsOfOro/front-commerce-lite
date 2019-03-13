@@ -54,7 +54,8 @@
     "react-dom": "16.8.4",
     "react-modal": "3.8.1",
     "react-router-dom": "4.3.1",
-    "recompose": "0.30.0"
+    "recompose": "0.30.0",
+    "wsse": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
