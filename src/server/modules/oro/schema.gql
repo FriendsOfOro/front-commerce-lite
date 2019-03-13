@@ -1,5 +1,6 @@
 type Query {
   category(id: Int!): Category
+  product(sku: String!): Product
 }
 
 type Category {
