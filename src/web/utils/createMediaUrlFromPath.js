@@ -1,4 +1,4 @@
-const BASE_MEDIA_URL = "https://demo.front-commerce.com";
+const BASE_MEDIA_URL = "https://demo.orocommerce.com";
 
 const createMediaUrlFromPath = path => {
   if (path && path.indexOf("http") !== -1) {

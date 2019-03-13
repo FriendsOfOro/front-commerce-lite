@@ -28,7 +28,7 @@ export default {
       axiosInstance
         .get("admin/api/products", {
           params: {
-            include: "names"
+            include: "names,images,images.image,images.image.filePath"
           }
         })
         .then(({ data }) => ({
@@ -41,7 +41,7 @@ export default {
       axiosInstance
         .get("admin/api/products", {
           params: {
-            include: "names",
+            include: "names,images,images.image,images.image.filePath",
             "filter[sku]": sku
           }
         })
@@ -50,6 +50,8 @@ export default {
   },
   Product: {
     name: ({ names }) => names[0].string,
+    imageUrl: ({ images }) =>
+      images[0].image["file-path"]["product-extra-large"],
     prices: () => {
       const fakeValue = {
         amount: 42.99,
