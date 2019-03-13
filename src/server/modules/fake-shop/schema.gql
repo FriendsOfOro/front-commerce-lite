@@ -1,28 +1,24 @@
-type Query {
+#import "../../graphql-specs/front-commerce-lite.gql"
+
+type Query implements CatalogQueries & CartQueries {
   category(id: Int!): Category
   product(sku: String!): Product
   cart: Cart
 }
 
-type Mutation {
+type Mutation implements CartMutations {
   addItemToCart(sku: String!): CartPayload
   removeItemFromCart(item_id: Int!): CartPayload
 }
 
-type CartPayload {
-  success: Boolean
-  errorMessage: String
-  cart: Cart
-}
-
-type Cart {
+type FakeCart implements Cart {
   id: Int
   items_qty: Int
   items: [CartItem]
   totals: CartTotals
 }
 
-type CartItem {
+type FakeCartItem implements CartItem {
   name: String
   qty: Int
   item_id: Int
@@ -31,29 +27,24 @@ type CartItem {
   priceInfo: CartItemPriceInfo
 }
 
-type CartItemPriceInfo {
+type FakeCartItemPriceInfo implements CartItemPriceInfo {
   rowTotalInclTax: Price
 }
 
-type CartTotals {
+type FakeCartTotals implements CartTotals {
   subtotalInclTax: Price
 }
 
-type Category {
+type FakeCategory implements Category {
   name: String
   layer(params: QueryInput!): Layer
 }
 
-input QueryInput {
-  size: Int!
-  from: Int!
-}
-
-type Layer {
+type FakeLayer implements Layer {
   products: [Product]
 }
 
-type Product {
+type FakeProduct implements Product {
   sku: String
   name: String
   description: String
@@ -61,21 +52,6 @@ type Product {
   prices: ProductPrices
 }
 
-type ProductPrices {
+type FakeProductPrices implements ProductPrices {
   finalPrice: BothInclAndExclTaxesPrice
-}
-
-type BothInclAndExclTaxesPrice {
-  priceInclTax: Price
-  priceExclTax: Price
-}
-
-type Price {
-  value: Money
-  includeTax: Boolean
-}
-
-type Money {
-  amount: Float
-  currency: String
 }

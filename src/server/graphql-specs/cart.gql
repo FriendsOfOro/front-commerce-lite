@@ -1,0 +1,38 @@
+interface CartQueries {
+  cart: Cart
+}
+
+interface CartMutations {
+  addItemToCart(sku: String!): CartPayload
+  removeItemFromCart(item_id: Int!): CartPayload
+}
+
+interface Cart {
+  id: Int
+  items_qty: Int
+  items: [CartItem]
+  totals: CartTotals
+}
+
+interface CartItem {
+  name: String
+  qty: Int
+  item_id: Int
+  sku: String
+  product: Product
+  priceInfo: CartItemPriceInfo
+}
+
+interface CartItemPriceInfo {
+  rowTotalInclTax: Price
+}
+
+interface CartTotals {
+  subtotalInclTax: Price
+}
+
+type CartPayload {
+  success: Boolean
+  errorMessage: String
+  cart: Cart
+}

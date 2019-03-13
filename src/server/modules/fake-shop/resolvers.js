@@ -1,4 +1,5 @@
 import faker from "faker";
+import typesImplementations from "./typesImplementations";
 
 const currency = "EUR";
 let cart = [];
@@ -26,6 +27,8 @@ const resolveSomeday = value =>
   );
 
 export default {
+  ...typesImplementations,
+
   Query: {
     category: () => ({
       name: "My Category",
@@ -55,7 +58,7 @@ export default {
     }
   },
 
-  Cart: {
+  FakeCart: {
     id: () => 42,
     items_qty: cart => cart.length,
     items: cart => cart,
@@ -65,21 +68,21 @@ export default {
         .reduce((total, value) => total + value, 0)
   },
 
-  CartItem: {
+  FakeCartItem: {
     item_id: item => cart.indexOf(item) + 1,
     qty: () => 1,
     product: item => item,
     priceInfo: item => item.prices.finalPrice
   },
 
-  CartItemPriceInfo: {
+  FakeCartItemPriceInfo: {
     rowTotalInclTax: amount => ({
       includeTax: true,
       value: { amount: amount, currency }
     })
   },
 
-  CartTotals: {
+  FakeCartTotals: {
     subtotalInclTax: amount => ({
       includeTax: true,
       value: { amount: amount, currency }

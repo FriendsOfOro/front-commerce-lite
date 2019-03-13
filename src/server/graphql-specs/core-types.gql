@@ -1,0 +1,9 @@
+type Price {
+  value: Money
+  includeTax: Boolean
+}
+
+type Money {
+  amount: Float
+  currency: String
+}

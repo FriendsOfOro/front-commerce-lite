@@ -1,0 +1,35 @@
+interface CatalogQueries {
+  category(id: Int!): Category
+  product(sku: String!): Product
+}
+
+interface Category {
+  name: String
+  layer(params: QueryInput!): Layer
+}
+
+interface Layer {
+  products: [Product]
+}
+
+interface Product {
+  sku: String
+  name: String
+  description: String
+  imageUrl: String
+  prices: ProductPrices
+}
+
+interface ProductPrices {
+  finalPrice: BothInclAndExclTaxesPrice
+}
+
+input QueryInput {
+  size: Int!
+  from: Int!
+}
+
+type BothInclAndExclTaxesPrice {
+  priceInclTax: Price
+  priceExclTax: Price
+}

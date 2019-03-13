@@ -1,0 +1,12 @@
+# Common types and interfaces to be used by modules
+# for being compatible with the default UI
+
+#import "./core-types.gql"
+#import "./catalog.gql"
+#import "./cart.gql"
+
+# Hack: a gql file must have content to please babel,
+# otherwise an « import only » file will not compile
+enum FrontCommerceVersion {
+  Lite
+}
