@@ -1,5 +1,6 @@
 import StoreInformation from "./modules/store-information";
 import FakeShop from "./modules/fake-shop";
+import Oro from "./modules/oro";
 
 export default [
   // In a real Front-Commerce application you could load core modules
@@ -10,5 +11,6 @@ export default [
   // architecture when it is not relevant
 
   StoreInformation,
-  process.env.FEATURE_FAKE_LOCAL_SHOP_ENABLE ? FakeShop : undefined
+  process.env.FEATURE_FAKE_LOCAL_SHOP_ENABLE ? FakeShop : undefined,
+  Oro
 ].filter(Boolean); // only keep the enabled ones
