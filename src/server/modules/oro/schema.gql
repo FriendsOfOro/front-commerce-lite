@@ -1,3 +1,44 @@
 type Query {
-  hello: String
+  category(id: Int!): Category
+}
+
+type Category {
+  name: String
+  layer(params: QueryInput!): Layer
+}
+
+input QueryInput {
+  size: Int!
+  from: Int!
+}
+
+type Layer {
+  products: [Product]
+}
+
+type Product {
+  sku: String
+  name: String
+  description: String
+  imageUrl: String
+  prices: ProductPrices
+}
+
+type ProductPrices {
+  finalPrice: BothInclAndExclTaxesPrice
+}
+
+type BothInclAndExclTaxesPrice {
+  priceInclTax: Price
+  priceExclTax: Price
+}
+
+type Price {
+  value: Money
+  includeTax: Boolean
+}
+
+type Money {
+  amount: Float
+  currency: String
 }
