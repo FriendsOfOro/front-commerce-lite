@@ -18,6 +18,7 @@ async function start() {
     })
   );
   app.use(await withGraphQLApi(require("./modules").default));
+  app.use(express.static("build/client"));
 
   const server = app.listen(config.port, config.host, undefined, () => {
     /* eslint-disable no-console */
