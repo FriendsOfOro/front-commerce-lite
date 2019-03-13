@@ -209,8 +209,8 @@ query StoreLocator {
 }
 ```
 
-To better understand and test your schema, you can use **GraphiQL**, it is a GraphQL web interface for GraphQL, similar to what PhpMyAdmin is for MySQL.
-In Front-Commerce Lite, we can access it at [http://0.0.0.0:4000/graphiql](http://0.0.0.0:4000/graphiql).
+To better understand and test your schema, you can use **GraphQL Playground**, it is a GraphQL web interface for GraphQL, similar to what PhpMyAdmin is for MySQL.
+In Front-Commerce Lite, we can access it at [http://0.0.0.0:4000/graphql](http://0.0.0.0:4000/graphql).
 
 > You may think that some of those data are already fetched in our `EnhanceHome` and thus, this is inefficient.
 > But `react-apollo` will handle that for you and will group the requests to only make the necessary ones.

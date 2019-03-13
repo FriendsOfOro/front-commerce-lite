@@ -47,7 +47,7 @@ Here is what Front-Commerce Lite can help you with:
   already configured for you
 - **great developer experience:** get in the flow with immediate feedback and
   interactive tools (<abbr title="Hot Module Reloading">HMR</abbr>,
-  [GraphiQL](https://github.com/graphql/graphiql) and
+  [GraphQL Playground](https://github.com/prisma/graphql-playground) and
   [Storybook](https://storybook.js.org/))
 - **up-to-date libraries:** webpack, react, apollo, react-router… experiment
   with their latest features

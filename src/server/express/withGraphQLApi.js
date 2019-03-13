@@ -1,5 +1,5 @@
 import express from "express";
-import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
+import { ApolloServer } from "apollo-server-express";
 import bodyParser from "body-parser";
 import { prepare } from "@gramps/gramps";
 import { HttpLink } from "apollo-link-http";
@@ -24,10 +24,10 @@ export default async modules => {
       GraphQLOptions.schema
     ].filter(Boolean)
   });
+  const server = new ApolloServer({ ...GraphQLOptions, playground: true });
 
   router.use(bodyParser.json());
-  router.use("/graphql", graphqlExpress(req => GraphQLOptions));
-  router.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql" }));
+  server.applyMiddleware({ app: router });
 
   return router;
 };
