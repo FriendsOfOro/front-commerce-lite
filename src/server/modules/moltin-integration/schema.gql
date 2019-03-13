@@ -1,0 +1,28 @@
+#import "../../graphql-specs/core-types.gql"
+#import "../../graphql-specs/catalog.gql"
+
+type Query implements CatalogQueries {
+  category(id: Int!): Category
+  product(sku: String!): Product
+}
+
+type MoltinCategory implements Category {
+  name: String
+  layer(params: QueryInput!): Layer
+}
+
+type MoltinPaginatedProducts implements Layer {
+  products: [Product]
+}
+
+type MoltinProduct implements Product {
+  sku: String
+  name: String
+  description: String
+  imageUrl: String
+  prices: ProductPrices
+}
+
+type MoltinPrices implements ProductPrices {
+  finalPrice: BothInclAndExclTaxesPrice
+}

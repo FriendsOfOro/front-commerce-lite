@@ -1,5 +1,4 @@
 import StoreInformation from "./modules/store-information";
-import FakeShop from "./modules/fake-shop";
 
 export default [
   // In a real Front-Commerce application you could load core modules
@@ -10,5 +9,10 @@ export default [
   // architecture when it is not relevant
 
   StoreInformation,
-  process.env.FEATURE_FAKE_LOCAL_SHOP_ENABLE ? FakeShop : undefined
+  process.env.FEATURE_FAKE_LOCAL_SHOP_ENABLE
+    ? require("./modules/fake-shop").default
+    : undefined,
+  process.env.FEATURE_MOLTIN_INTEGRATION_ENABLE
+    ? require("./modules/moltin-integration").default
+    : undefined
 ].filter(Boolean); // only keep the enabled ones
